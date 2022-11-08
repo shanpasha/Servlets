@@ -1,0 +1,45 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>ConfigEx</servlet-name>
+  	<display-name>ConfigEx</display-name>
+  	<description></description>
+  	<servlet-class>com.Config.ConfigEx</servlet-class>
+  	<init-param>
+         <param-name>user</param-name>
+         <param-value>shan</param-value>
+     </init-param>
+  	<init-param>
+         <param-name>pswd</param-name>
+         <param-value>shannu</param-value>
+     </init-param>
+  </servlet>
+  <servlet>
+  	<servlet-name>contexEx</servlet-name>
+  	<display-name>contexExC/dispExlay-name>	</display-name>
+  	<description></description>
+  	<servlet-class>com.Contex.contexEx</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ConfigEx</servlet-name>
+  	<url-pattern>/config</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>contexEx</servlet-name>
+  	<url-pattern>/contex</url-pattern>
+  </servlet-mapping>
+  
+   <context-param>
+        <param-name>Name</param-name>
+        <param-value>Shan</param-value>
+    </context-param>
+    <context-param>
+        <param-name>City</param-name>
+        <param-value>Hyderabad</param-value>
+    </context-param>
+    
+</web-app>
