@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>WebAppliction</display-name>
+  <servlet>
+  <servlet-name>Serv</servlet-name>
+  <servlet-class>BasicWebPages.Welcome</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  
+  <servlet-name>Serv</servlet-name>
+  <url-pattern>/Sha</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  <servlet-name>gen</servlet-name>
+  <servlet-class>BasicWebPages.GenericServlets</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  
+  <servlet-name>gen</servlet-name>
+  <url-pattern>/gen</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>httpS</servlet-name>
+  <servlet-class>BasicWebPages.HttpServlet</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  
+  <servlet-name>httpS</servlet-name>
+  <url-pattern>/ht</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
