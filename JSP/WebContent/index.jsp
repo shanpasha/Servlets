@@ -1,3 +1,4 @@
+<%@page import="EMP.Bio"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.core.Out"%>
 <%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -29,7 +30,17 @@ int c=a+b;
 
 %>
 
-<h2> addition <%=out.print(adition(25, 9))%></h2>
+
+<h2> addition <%
+int c=adition(25, 5);
+out.print(c);%></h2>
+
+
+<% out.print(Bio.ful("shan","pasha"));%>
+
+
+
+
 
 
 </body>
