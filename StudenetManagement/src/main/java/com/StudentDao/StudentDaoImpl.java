@@ -21,23 +21,10 @@ public class StudentDaoImpl implements StudentDao {
 	ResultSet resultSet=null;
 	int result;
 	
-	public int getResult() {
-		return result;
-	}
+	
 
-	public void setResult(int result) {
-		this.result = result;
-	}
+	
 
-	public void  Sucess(int result) {
-	this.result=result;
-		if(result==1) {
-			System.out.println("Sucessfully Added...");
-		}else {
-			System.out.println("enter valid Details...");
-		}
-		
-	}
 	
 	public List<Student> getStudents() {
 		
@@ -94,14 +81,15 @@ public class StudentDaoImpl implements StudentDao {
 			try {
 				con.setAutoCommit(false);
 				
-				ps=con.prepareStatement("insert into student values (?,?,?,?)");
+				ps=con.prepareStatement("insert into student values (?,?,,?,?)");
 				ps.setInt(1, student.getRoll());
 				ps.setString(2, student.getName());
 				ps.setString(3, student.getCourse());
 				ps.setString(4, student.getLocation());
+				
 				 StudentDaoImpl s=new StudentDaoImpl();
 				 int result=ps.executeUpdate();
-				 s.Sucess(result);
+				
 			
 				con.commit();
 				
@@ -183,13 +171,19 @@ public class StudentDaoImpl implements StudentDao {
 		
 	}
 	
+//	public static void main(String[] args) {
+//	StudentDaoImpl n=new StudentDaoImpl();
+//	
+//	Student student=new Student("sriman", 1, "java", "hyd");
+//			n.update_Id(student);
+//	}
+	
 	public static void main(String[] args) {
-	StudentDaoImpl n=new StudentDaoImpl();
-	
-	Student student=new Student("sriman", 1, "java", "hyd");
-			n.update_Id(student);
+		
+		StudentDaoImpl daoImpl=new StudentDaoImpl();
+		
+		daoImpl.add(new Student("murali", 56 ,"java", "hyd"));
+		
 	}
-	
-	
 	
 	}

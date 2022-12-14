@@ -2,11 +2,13 @@ package com.StudentDao;
 
 
 
+import java.util.List;
+
 import com.Model.Student;
 
 public interface StudentDao {
 	
-	java.util.List<Student>getStudents();
+List<Student>getStudents();
 	
  public void add(Student student);
  

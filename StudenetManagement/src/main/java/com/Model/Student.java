@@ -5,12 +5,14 @@ public class Student {
 	private int roll;
 	private String course;
 	private String location;
+	
 	public Student(String name, int roll, String course, String location) {
 		super();
 		this.name = name;
 		this.roll = roll;
 		this.course = course;
 		this.location = location;
+		
 	}
 	public Student() {
 		
@@ -43,6 +45,10 @@ public class Student {
 	public String toString() {
 		return "Student [name=" + name + ", roll=" + roll + ", course=" + course + ", location=" + location + "]";
 	}
+	
+	
+	
+	
 	
 	
 
